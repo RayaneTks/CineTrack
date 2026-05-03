@@ -1,6 +1,8 @@
 # CineTrack — CRUD d'affiches de films
 
-Application Next.js pour gérer des affiches de films en CRUD complet :
+**Contexte :** petit rendu scolaire — application web en **React** (via [Next.js](https://nextjs.org/), App Router et composants client) avec persistance locale côté serveur. Il s’agit d’un exercice de mise en pratique (CRUD, formulaires, état UI), pas d’un produit complet.
+
+Application pour gérer des affiches de films en CRUD complet :
 
 - Créer une affiche (titre, réalisateur, année, note, statut, URL d'image)
 - Lire la liste des affiches
