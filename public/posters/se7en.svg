@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="750" viewBox="0 0 500 750" role="img" aria-labelledby="t">
+  <title id="t">Se7en</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="750" fill="url(#g)"/>
+  <rect x="24" y="24" width="452" height="702" fill="none" stroke="#f87171" stroke-opacity="0.45" stroke-width="2" rx="18"/>
+  <text x="250" y="360" text-anchor="middle" fill="#f1f5f9" font-family="system-ui,Segoe UI,sans-serif" font-size="56" font-weight="800">Se7en</text>
+  <text x="250" y="410" text-anchor="middle" fill="#94a3b8" font-family="system-ui,Segoe UI,sans-serif" font-size="16">1995</text>
+  <text x="250" y="620" text-anchor="middle" fill="#64748b" font-family="system-ui,Segoe UI,sans-serif" font-size="13">Affiche locale (demo)</text>
+</svg>
