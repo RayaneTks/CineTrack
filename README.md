@@ -1,39 +1,53 @@
-# CineTrack — CRUD d'affiches de films
+# CineTrack — Gestion d’une collection de films
 
-**Contexte :** petit rendu scolaire — application web en **React** (via [Next.js](https://nextjs.org/), App Router et composants client) avec persistance locale côté serveur. Il s’agit d’un exercice de mise en pratique (CRUD, formulaires, état UI), pas d’un produit complet.
+Application web réalisée dans un cadre scolaire pour gérer des fiches de films et leurs affiches. Le projet met en pratique les opérations CRUD, les formulaires React et une API avec persistance locale.
 
-Application pour gérer des affiches de films en CRUD complet :
+## Fonctionnalités
 
-- Créer une affiche (titre, réalisateur, année, note, statut, URL d'image)
-- Lire la liste des affiches
-- Mettre à jour une affiche
-- Supprimer une affiche
-- Dupliquer une affiche, exporter/importer un fichier JSON (`{ "items": [...] }`), tri, filtre par décennie, roulette parmi les films « À voir »
+- Création, modification, suppression et duplication de fiches de films.
+- Saisie du titre, du réalisateur, de l’année, de la note, du statut et de l’affiche.
+- Tri, filtrage par décennie et sélection aléatoire d’un film à voir.
+- Import et export des données au format JSON.
 
-Les données sont persistées dans `data/posters.json`.
+## Technologies
 
-## Lancer le projet
+Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · Motion.
+
+Les données sont enregistrées côté serveur dans `data/posters.json`. Ce stockage sur fichier convient à l’exercice ; il nécessite un environnement conservant les fichiers écrits.
+
+## Installation
 
 ```bash
-npm install
+git clone https://github.com/RayaneTks/CineTrack.git
+cd CineTrack
+npm ci
 npm run dev
 ```
 
-Puis ouvrir [http://localhost:3000](http://localhost:3000).
+Ouvrir [http://localhost:3000](http://localhost:3000).
 
-## Endpoints API
-
-- `GET /api/posters` — liste des affiches
-- `POST /api/posters` — création d'une affiche
-- `GET /api/posters/:id` — détail d'une affiche
-- `PUT /api/posters/:id` — modification d'une affiche
-- `DELETE /api/posters/:id` — suppression d'une affiche
-- `POST /api/posters/:id/duplicate` — duplication (nouvelle ligne, titre suffixé « (copie) »)
-- `POST /api/posters/import` — corps JSON `{ "items": [ MoviePosterInput, ... ] }` pour créer plusieurs affiches
-
-## Build de production
+## Commandes
 
 ```bash
-npm run build
-npm run start
+npm run build  # Compiler l’application
+npm run start  # Démarrer la version compilée
+npm run lint   # Vérifier et corriger le code avec ESLint
 ```
+
+## Organisation
+
+| Chemin | Rôle |
+|---|---|
+| `src/app/` | Pages et routes API. |
+| `src/components/posters/` | Formulaires, filtres et affichage des films. |
+| `src/lib/` | Validation des données et stockage. |
+| `data/` | Données persistées au format JSON. |
+
+## API
+
+| Méthode | Route | Action |
+|---|---|---|
+| GET / POST | `/api/posters` | Lister ou créer les fiches. |
+| GET / PUT / DELETE | `/api/posters/:id` | Consulter, modifier ou supprimer une fiche. |
+| POST | `/api/posters/:id/duplicate` | Dupliquer une fiche. |
+| POST | `/api/posters/import` | Importer un objet JSON `{ "items": [...] }`. |
